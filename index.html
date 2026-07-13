@@ -3,80 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mama Blessing Kitchen</title>
+  <title>Mama Blessing's Kitchen - Authentic Nigerian Food</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
     body { background: #fff8f0; color: #333; }
-    header { background: #e63946; color: white; text-align: center; padding: 20px; }
-    header h1 { font-size: 28px; }
-    .menu { padding: 20px; text-align: center; }
-    .menu h2 { color: #e63946; margin-bottom: 15px; }
-    .food { background: white; margin: 10px auto; padding: 15px; border-radius: 10px; max-width: 400px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .order { padding: 20px; background: #ffe5d9; }
-    .order h2 { text-align: center; color: #e63946; margin-bottom: 15px; }
-    form { max-width: 400px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
-    input, select, textarea, button { padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 16px; }
-    button { background: #25D366; color: white; border: none; font-weight: bold; cursor: pointer; }
-    button:hover { background: #1ebe5b; }
-    footer { text-align: center; padding: 15px; background: #e63946; color: white; margin-top: 20px; }
+    header { background: #d35400; color: white; padding: 30px 20px; text-align: center; }
+    header h1 { font-size: 28px; margin-bottom: 5px; }
+    header p { font-size: 16px; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+    h2 { color: #d35400; text-align: center; margin: 30px 0 20px; }
+    .menu { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .food-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+    .food-card img { width: 100%; height: 200px; object-fit: cover; }
+    .food-card h3 { padding: 15px 10px 5px; color: #d35400; }
+    .food-card p { padding: 0 10px 15px; font-size: 14px; }
+    .btn { display: block; background: #25D366; color: white; text-decoration: none; padding: 15px; text-align: center; font-size: 18px; font-weight: bold; margin: 30px auto; border-radius: 10px; max-width: 300px; }
+    .about { background: white; padding: 20px; border-radius: 15px; margin: 30px 0; text-align: center; }
+    footer { background: #333; color: white; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>🍲 Mama Blessing Kitchen</h1>
-    <p>Authentic Nigerian Food Delivered to You</p>
+    <h1>Mama Blessing's Kitchen</h1>
+    <p>Authentic Nigerian Food Made With Love ❤️</p>
   </header>
 
-  <section class="menu">
-    <h2>Our Menu</h2>
-    <div class="food">
-      <h3>Jollof Rice + Chicken</h3>
-      <p>₦3,500</p>
+  <div class="container">
+    
+    <div class="about">
+      <h2>About Us</h2>
+      <p>We serve the best homemade Nigerian dishes in Lagos. Fresh ingredients, original recipes, and mama's love in every bite!</p>
     </div>
-    <div class="food">
-      <h3>Egusi Soup + Pounded Yam</h3>
-      <p>₦4,000</p>
-    </div>
-    <div class="food">
-      <h3>Pepper Soup</h3>
-      <p>₦3,000</p>
-    </div>
-  </section>
 
-  <section class="order">
-    <h2>Place Your Order</h2>
-    <form id="orderForm">
-      <input type="text" id="name" placeholder="Your Name" required>
-      <input type="text" id="address" placeholder="Delivery Address" required>
-      <select id="food">
-        <option>Jollof Rice + Chicken</option>
-        <option>Egusi Soup + Pounded Yam</option>
-        <option>Pepper Soup</option>
-      </select>
-      <textarea id="note" placeholder="Extra Note"></textarea>
-      <button type="submit">Order on WhatsApp</button>
-    </form>
-  </section>
+    <h2>Our Special Menu</h2>
+    <div class="menu">
+      <div class="food-card">
+        <img src="IMG-20260713-WA3897.jpg" alt="Pounded Yam and Efo Soup">
+        <h3>Pounded Yam & Efo Soup</h3>
+        <p>Soft pounded yam with fresh vegetable soup</p>
+      </div>
+      
+      <div class="food-card">
+        <img src="IMG-20260713-WA2747.jpg" alt="Jollof Rice">
+        <h3>Nigerian Jollof Rice</h3>
+        <p>Party jollof with chicken and plantain</p>
+      </div>
+      
+      <div class="food-card">
+        <img src="IMG-20260713-WA5976.jpg" alt="Fried Rice">
+        <h3>Fried Rice</h3>
+        <p>Delicious fried rice with vegetables</p>
+      </div>
+    </div>
+
+    <a href="https://wa.me/2348000000" class="btn">Order on WhatsApp</a>
+
+  </div>
 
   <footer>
-    <p>© 2026 Mama Blessing Kitchen | Call/WhatsApp: 08139320756</p>
+    <p>📍 Lagos, Nigeria | 📞 Call: 080-XXX-XXXX</p>
+    <p>© 2026 Mama Blessing's Kitchen</p>
   </footer>
-
-  <script>
-    document.getElementById('orderForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      let name = document.getElementById('name').value;
-      let address = document.getElementById('address').value;
-      let food = document.getElementById('food').value;
-      let note = document.getElementById('note').value;
-      
-      let message = `Hello Mama Blessing Kitchen!%0A%0AName: ${name}%0AFood: ${food}%0AAddress: ${address}%0ANote: ${note}`;
-      let whatsappUrl = `https://wa.me/2348139320756?text=${message}`;
-      
-      window.open(whatsappUrl, '_blank');
-    });
-  </script>
 
 </body>
 </html>
